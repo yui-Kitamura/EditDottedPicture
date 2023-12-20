@@ -26,7 +26,6 @@ jobs:
           ls -R -l -h
           git config user.email "githubAction@yui-Kitamura.github.io"
           git config user.name "Github Action"
-          git remote add origin https://github.com/yui-Kitamura/EditDottedPicture.git
           npm ci
           npm install gh-pages
           npm run build
