@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+  # Allowed to run manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Run deploy command set
+        run: |
+          ls -R -l -h
+          git config user.email "githubAction@yui-Kitamura.github.io"
+          git config user.name "Github Action"
+          npm ci
+          npm install --save gh-pages
+          npm run deploy
+          
