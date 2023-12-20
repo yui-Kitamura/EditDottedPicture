@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="79f29cb2-f17f-434a-aac7-419141efeaa8" name="変更" comment="" />
+    <list default="true" id="79f29cb2-f17f-434a-aac7-419141efeaa8" name="変更" comment="import [sharp](https://github.com/lovell/sharp)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/convert.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +17,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -18,6 +33,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -26,22 +44,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;mysql-explain.agentPath&quot;: &quot;C:\\Users\\yuiKitamura\\AppData\\Roaming\\JetBrains\\IntelliJIdea2023.3\\plugins\\mysql-explain-intellij-plugin\\lib\\mysql-explain-agent-1.1.0-jar-with-dependencies.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;E:/toolSW/nodejs/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "mysql-explain.agentPath": "C:\\Users\\yuiKitamura\\AppData\\Roaming\\JetBrains\\IntelliJIdea2023.3\\plugins\\mysql-explain-intellij-plugin\\lib\\mysql-explain-agent-1.1.0-jar-with-dependencies.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "E:/toolSW/nodejs/node",
+    "nodejs_package_manager_path": "npm",
+    "npm.npm start.executor": "Run",
+    "ts.external.directory.path": "E:\\toolSW\\jetbrain\\intelliJ\\2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -73,8 +92,49 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703052480073</updated>
-      <workItem from="1703052481175" duration="301000" />
+      <workItem from="1703052481175" duration="2498000" />
     </task>
+    <task id="LOCAL-00001" summary="idea設定">
+      <option name="closed" value="true" />
+      <created>1703052942230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703052942230</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initialize project using Create React App">
+      <option name="closed" value="true" />
+      <created>1703053039532</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703053039532</updated>
+    </task>
+    <task id="LOCAL-00003" summary="build GitHub Pages  &#10;thanks to https://qiita.com/stin_dev/items/c5eb2be09d284f0408fd">
+      <option name="closed" value="true" />
+      <created>1703053212590</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703053212590</updated>
+    </task>
+    <task id="LOCAL-00004" summary="modify index.html  &#10;be a our site">
+      <option name="closed" value="true" />
+      <created>1703054671770</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703054671770</updated>
+    </task>
+    <task id="LOCAL-00005" summary="import [sharp](https://github.com/lovell/sharp)">
+      <option name="closed" value="true" />
+      <created>1703054709131</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703054709131</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,5 +150,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="idea設定" />
+    <MESSAGE value="Initialize project using Create React App" />
+    <MESSAGE value="build GitHub Pages  &#10;thanks to https://qiita.com/stin_dev/items/c5eb2be09d284f0408fd" />
+    <MESSAGE value="build GitHub Pages&#10;thanks to https://qiita.com/stin_dev/items/c5eb2be09d284f0408fd by @y-hiraoka" />
+    <MESSAGE value="modify index.html  &#10;be a our site" />
+    <MESSAGE value="import [sharp](https://github.com/lovell/sharp)" />
+    <option name="LAST_COMMIT_MESSAGE" value="import [sharp](https://github.com/lovell/sharp)" />
   </component>
 </project>

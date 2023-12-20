@@ -1,12 +1,9 @@
 const sharp = require("sharp");
 
-const inFileName = process.argv[2];
-const outFileName = "cvt_" + inFileName;
-
-sharp(inFileName)
-    .metadata().then(({ width }) => sharp(input)
+sharp(process.argv[2])
+    .metadata().then(({ width }) => sharp(process.argv[2])
     .resize(width * 8)
-    .toFile(outFileName))
+    .toFile("cvt_" + process.argv[2]))
 .then(function(data){
     console.log("Image converted successfully!");
     console.dir(data);
