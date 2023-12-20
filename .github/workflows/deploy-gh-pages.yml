@@ -16,6 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: listFile
+        shell: bash
+        run: |
+          ls -R -l -h
       - name: runBash
         shell: bash
         run: |
