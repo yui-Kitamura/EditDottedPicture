@@ -22,4 +22,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - run: ls -R -l -h
+      - run: npm ci
       - run: npm run deploy
+          
