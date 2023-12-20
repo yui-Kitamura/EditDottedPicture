@@ -1,0 +1,20 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+  # Allowed to run manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: runBash
+        shell: bash
+        run: |
+          npm run deploy
