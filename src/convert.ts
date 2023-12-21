@@ -2,15 +2,17 @@
 import sharp from 'sharp';
 
 const converter = function(input:HTMLImageElement, output:HTMLImageElement) {
-    Buffer.from(input.dir);
-    sharp(input)
-        .metadata().then(({width}) => sharp(input)
-        .resize(width * 8)
-        .png())
-        .then(function (data:Blob) {
+    const inBuf = Buffer.from(input.src);
+    sharp(inBuf)
+        .metadata().then(({width}) => sharp(inBuf)
+            .resize(width * 8)
+            .png()
+            .toBuffer()
+        )
+        .then(function (data:Buffer) {
             console.log("Image converted successfully!");
-            console.dir(data);
-            output.src = URL.createObjectURL(data);
+            let blobData = new Blob([data], {type:'image/png'});
+            output.src = URL.createObjectURL(blobData);
         })
         .catch(function (err:any) {
             console.error(err);
