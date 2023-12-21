@@ -1,4 +1,5 @@
 import './App.css';
+import converter from './convert.ts';
 
 function App() {
     const fileReader = new FileReader();
@@ -15,7 +16,10 @@ function App() {
     }
 
     function handleConvert(){
-        //converter(inImgTag.src);
+        converter(
+            document.getElementById("inputImg"),
+            document.getElementById("outputImg")
+        );
     }
 
     return (
