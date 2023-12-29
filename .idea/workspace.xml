@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79f29cb2-f17f-434a-aac7-419141efeaa8" name="変更" comment="import [sharp](https://github.com/lovell/sharp)">
+    <list default="true" id="79f29cb2-f17f-434a-aac7-419141efeaa8" name="変更" comment="png -&gt; buffer で処理を実現">
+      <change afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/indexClientComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/convert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/convert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convert.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/convert.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +60,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/workspace/inj/projects/edit-dotted-picture/src/app",
     "mysql-explain.agentPath": "C:\\Users\\yuiKitamura\\AppData\\Roaming\\JetBrains\\IntelliJIdea2023.3\\plugins\\mysql-explain-intellij-plugin\\lib\\mysql-explain-agent-1.1.0-jar-with-dependencies.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -56,8 +68,14 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "E:/toolSW/nodejs/node",
     "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.eject.executor": "Run",
     "npm.npm start.executor": "Run",
-    "ts.external.directory.path": "E:\\toolSW\\jetbrain\\intelliJ\\2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "npm.run dev.executor": "Run",
+    "project.structure.last.edited": "ファセット",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.27011493",
+    "ts.external.directory.path": "D:\\workspace\\inj\\projects\\edit-dotted-picture\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -69,8 +87,37 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\inj\projects\edit-dotted-picture\src\app" />
+      <recent name="D:\workspace\inj\projects\edit-dotted-picture" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\inj\projects\edit-dotted-picture\src\app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.build">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eject" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -83,6 +130,29 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="run dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript デバッグ.Debug Application" />
+      <item itemvalue="npm.run dev" />
+      <item itemvalue="npm.npm start" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.eject" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.eject" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,7 +162,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703052480073</updated>
-      <workItem from="1703052481175" duration="2498000" />
+      <workItem from="1703052481175" duration="13655000" />
+      <workItem from="1703086037711" duration="13798000" />
     </task>
     <task id="LOCAL-00001" summary="idea設定">
       <option name="closed" value="true" />
@@ -134,7 +205,199 @@
       <option name="project" value="LOCAL" />
       <updated>1703054709131</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="8倍拡大&amp;png変換">
+      <option name="closed" value="true" />
+      <created>1703055241800</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703055241800</updated>
+    </task>
+    <task id="LOCAL-00007" summary="simple App style">
+      <option name="closed" value="true" />
+      <created>1703055734127</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703055734127</updated>
+    </task>
+    <task id="LOCAL-00008" summary="write silent dependency">
+      <option name="closed" value="true" />
+      <created>1703058047580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703058047580</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix package-lock">
+      <option name="closed" value="true" />
+      <created>1703058297722</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703058297722</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix package-lock">
+      <option name="closed" value="true" />
+      <created>1703058362634</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1703058362634</updated>
+    </task>
+    <task id="LOCAL-00011" summary="remove for GitHub action environment">
+      <option name="closed" value="true" />
+      <created>1703058479891</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703058479891</updated>
+    </task>
+    <task id="LOCAL-00012" summary="originの設定">
+      <option name="closed" value="true" />
+      <created>1703059298198</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703059298198</updated>
+    </task>
+    <task id="LOCAL-00013" summary="originの設定">
+      <option name="closed" value="true" />
+      <created>1703059469817</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703059469817</updated>
+    </task>
+    <task id="LOCAL-00014" summary="revert">
+      <option name="closed" value="true" />
+      <created>1703059603313</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703059603313</updated>
+    </task>
+    <task id="LOCAL-00015" summary="follow to https://qiita.com/salty-byte/items/a542e57a1a94ae4b2ab8">
+      <option name="closed" value="true" />
+      <created>1703059779739</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703059779739</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix token">
+      <option name="closed" value="true" />
+      <created>1703060033948</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1703060033948</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fix token">
+      <option name="closed" value="true" />
+      <created>1703060290837</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703060290837</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Implement function to upload and convert images">
+      <option name="closed" value="true" />
+      <created>1703139223063</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703139223063</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update convert.js to be able to use with App">
+      <option name="closed" value="true" />
+      <created>1703139247114</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703139247114</updated>
+    </task>
+    <task id="LOCAL-00020" summary="convert from JavaScript(js) to TypeScript(ts)">
+      <option name="closed" value="true" />
+      <created>1703141349152</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703141349152</updated>
+    </task>
+    <task id="LOCAL-00021" summary="call converter">
+      <option name="closed" value="true" />
+      <created>1703141366712</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1703141366712</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update package">
+      <option name="closed" value="true" />
+      <created>1703141386372</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703141386372</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update action-build environment Node version">
+      <option name="closed" value="true" />
+      <created>1703141578709</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1703141578709</updated>
+    </task>
+    <task id="LOCAL-00024" summary="=SSR= create server dir">
+      <option name="closed" value="true" />
+      <created>1703142805626</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1703142805626</updated>
+    </task>
+    <task id="LOCAL-00025" summary="=SSR= add server script">
+      <option name="closed" value="true" />
+      <created>1703142955071</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1703142955071</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix indent">
+      <option name="closed" value="true" />
+      <created>1703142973749</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1703142973749</updated>
+    </task>
+    <task id="LOCAL-00027" summary="=SSR= add server script dependency">
+      <option name="closed" value="true" />
+      <created>1703142993927</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1703142993927</updated>
+    </task>
+    <task id="LOCAL-00028" summary="=SSR= update package-lock">
+      <option name="closed" value="true" />
+      <created>1703143023864</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1703143023864</updated>
+    </task>
+    <task id="LOCAL-00029" summary="png -&gt; buffer で処理を実現">
+      <option name="closed" value="true" />
+      <created>1703145047809</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1703145047809</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,12 +415,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="idea設定" />
-    <MESSAGE value="Initialize project using Create React App" />
     <MESSAGE value="build GitHub Pages  &#10;thanks to https://qiita.com/stin_dev/items/c5eb2be09d284f0408fd" />
     <MESSAGE value="build GitHub Pages&#10;thanks to https://qiita.com/stin_dev/items/c5eb2be09d284f0408fd by @y-hiraoka" />
     <MESSAGE value="modify index.html  &#10;be a our site" />
     <MESSAGE value="import [sharp](https://github.com/lovell/sharp)" />
-    <option name="LAST_COMMIT_MESSAGE" value="import [sharp](https://github.com/lovell/sharp)" />
+    <MESSAGE value="8倍拡大&amp;png変換" />
+    <MESSAGE value="simple App style" />
+    <MESSAGE value="write silent dependency" />
+    <MESSAGE value="fix package-lock" />
+    <MESSAGE value="remove for GitHub action environment" />
+    <MESSAGE value="originの設定" />
+    <MESSAGE value="revert" />
+    <MESSAGE value="follow to https://qiita.com/salty-byte/items/a542e57a1a94ae4b2ab8" />
+    <MESSAGE value="fix token" />
+    <MESSAGE value="Implement function to upload and convert images" />
+    <MESSAGE value="update convert.js to be able to use with App" />
+    <MESSAGE value="convert from JavaScript(js) to TypeScript(ts)" />
+    <MESSAGE value="call converter" />
+    <MESSAGE value="update package" />
+    <MESSAGE value="update action-build environment Node version" />
+    <MESSAGE value="=SSR= create server dir" />
+    <MESSAGE value="=SSR= add server script" />
+    <MESSAGE value="fix indent" />
+    <MESSAGE value="=SSR= add server script dependency" />
+    <MESSAGE value="=SSR= update package-lock" />
+    <MESSAGE value="png -&gt; buffer で処理を実現" />
+    <option name="LAST_COMMIT_MESSAGE" value="png -&gt; buffer で処理を実現" />
   </component>
 </project>
