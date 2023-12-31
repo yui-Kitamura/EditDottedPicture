@@ -1,8 +1,8 @@
 name: Deploy
 
 on:
-  push:
-    branches: ["main"]
+  ###push:
+  ###  branches: ["main"]
   # Allowed to run manually from the Actions tab
   workflow_dispatch:
 
