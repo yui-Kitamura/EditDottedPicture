@@ -1,11 +1,11 @@
 import indexClientComponent from './indexClientComponent';
 import ClientComponent from "react";
-import converter from "./convert.ts";
+//import converter from "./convert.ts";
 
 export default function App() {
     return (
         <main className="App">
-            <form onSubmit={()=>converter(document.getElementById("inputImg"),document.getElementById("outputImg"))}>
+            <form>
                 <input id={"selectInput"} type={"file"} accept={"image/png"}/>
                 <ClientComponent myAction={indexClientComponent}/>
                 <input type={"submit"} value={"convert"}/>
