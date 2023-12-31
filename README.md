@@ -1,8 +1,6 @@
 # What is this?
-I don`t know...  
+convert png image  
+resize x8 and let be black around the origin pixel.
 
 ## Show in web
 GitHub Pages https://yui-kitamura.github.io/EditDottedPicture/  
-
-## Thanks to
-gh-pages [GitHub Repo](https://github.com/tschaub/gh-pages)
