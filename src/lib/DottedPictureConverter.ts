@@ -1,8 +1,8 @@
 /**
- * from https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E9%96%A2%E6%95%B0
- * and modified
+ * from https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#ジェネレーター関数
+ * and modified by tsutoringo
  * @param start 
- * @param end 
+ * @param to
  * @param step 
  * @returns 
  */
