@@ -64,7 +64,7 @@ const toBlobPromisefy = (canvas: HTMLCanvasElement, type?: string | undefined, q
   });
 }
 
-export const convert = async (image: HTMLImageElement, option?: Partial<RenderOption>): Promise<string> => {
+export const convert = async (imageURL: string, option?: Partial<RenderOption>): Promise<string> => {
   const {
     BOX_SIZE,
     BORDER_COLOR
@@ -72,6 +72,8 @@ export const convert = async (image: HTMLImageElement, option?: Partial<RenderOp
     BOX_SIZE: 8,
     BORDER_COLOR: [0, 0, 0]
   } as RenderOption, option);
+
+  const image = await loadImage(imageURL);
 
   const INLINE_BOX_SIZE = BOX_SIZE - 2;
   const BORDER_COLOR_STR = `rgb(${BORDER_COLOR[0]}, ${BORDER_COLOR[1]}, ${BORDER_COLOR[2]})`;
