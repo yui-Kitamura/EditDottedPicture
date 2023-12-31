@@ -42,7 +42,6 @@ export const Converter = () => {
     <>
       <form action={handleFileUpload}>
         <input name={"file"} type={"file"} accept={"image/png"}/>
-        <input type={"button"} value={"upload"}/>
         <input type={"submit"} value={"convert"}/>
       </form>
       <figure>
