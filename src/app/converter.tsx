@@ -7,6 +7,20 @@ export const Converter = () => {
   const outputImgRef = useRef<HTMLImageElement>(null);
   const [previewSize, setPreviewSize] = useState<[width: number, height: number]>([0, 0]);
 
+  const [ inputFilePreviewURL, _setInputFilePreviewURL] = useState('');
+  const [ outputFilePreviewURL, _setoutputFilePreviewURL] = useState('');
+
+  const setInputFilePreviewURL = (val: string) => {
+    if (inputFilePreviewURL != '') URL.revokeObjectURL(outputFilePreviewURL);
+    _setInputFilePreviewURL(val);
+  }
+
+  const setOutputFilePreviewURL = (val: string) => {
+    if (outputFilePreviewURL != '') URL.revokeObjectURL(outputFilePreviewURL);
+    _setoutputFilePreviewURL(val);
+  }
+
+
   const handleFileUpload = (formData: FormData) => {
     const file = formData.get('file');
   
@@ -16,21 +30,12 @@ export const Converter = () => {
     }
 
     const inputFileURL = URL.createObjectURL(file);
-    loadImage(inputFileURL).then(img => {
-      setPreviewSize([img.width, img.height]);
+    setInputFilePreviewURL(inputFileURL);
 
-      return convert(img);
-    }).then((convertedURL: string) => {
-      if (outputImgRef.current) {
-        outputImgRef.current.addEventListener('load', () => {
-          URL.revokeObjectURL(convertedURL)
-        }, { once: true });
-
-        outputImgRef.current.src = convertedURL;
-      }
-    }).finally(() => {
-      URL.revokeObjectURL(inputFileURL);
-    });
+    convert(inputFileURL)
+      .then((convertedURL: string) => {
+        setOutputFilePreviewURL(convertedURL);
+      });
   };
 
   return (
@@ -43,12 +48,12 @@ export const Converter = () => {
       <figure>
         <figcaption>入力画像</figcaption>
         <picture>
-          <img width={previewSize[0]} height={previewSize[1]} id={"inputImg"} alt={"選択された画像"}/>
+          <img src={inputFilePreviewURL} id={"inputImg"} alt={"選択された画像"}/>
         </picture>
       </figure>
       <figure>
         <figcaption>出力画像</figcaption>
-        <img width={previewSize[0]} height={previewSize[1]} ref={outputImgRef} id={"outputImg"} alt={"出力された画像"}/>
+        <img src={outputFilePreviewURL} id={"outputImg"} alt={"出力された画像"}/>
       </figure>
     </>
   )
