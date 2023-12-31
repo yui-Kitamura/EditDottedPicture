@@ -1,5 +1,3 @@
-'use client';
-
 import {
     DefaultFileReader
 } from "next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/default-file-reader";
