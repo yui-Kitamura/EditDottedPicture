@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { convert, loadImage } from '../lib/DottedPictureConverter';
+import styles from './converter.module.css';
 
 export const Converter = () => {
   const outputImgRef = useRef<HTMLImageElement>(null);
@@ -44,13 +45,13 @@ export const Converter = () => {
         <input name={"file"} type={"file"} accept={"image/png"}/>
         <input type={"submit"} value={"convert"}/>
       </form>
-      <figure>
+      <figure className={styles.fig}>
         <figcaption>入力画像</figcaption>
         <picture>
           <img src={inputFilePreviewURL} id={"inputImg"} alt={"選択された画像"}/>
         </picture>
       </figure>
-      <figure>
+      <figure className={styles.fig}>
         <figcaption>出力画像</figcaption>
         <img src={outputFilePreviewURL} id={"outputImg"} alt={"出力された画像"}/>
       </figure>
